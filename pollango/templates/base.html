@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="/css/main.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+ 
+ <body>
+	 <div id="container">
+    	 <div id="header">
+{% block title %}
+Page Title
+{% endblock %}
+		</div>
+	<div id="fullWidthColumn">
+{% block contents %}
+
+{% endblock %}
+	</div>
+
+	<div id="leftColumn">	LEFT COLUMN
+	</div>
+	<div id="rightColumn">
+	{% block sidebar %}
+	<h3>Meta</h3>
+	<ul>
+	<li>
+	<a href="/create/"> Create new Poll</a>
+
+	</li>
+	</ul>
+
+	<h3>Recent Polls</h3>
+	<ul>
+	{% for poll in recents %}
+	<li>
+	<a href="{{poll.get_absolute_url}}">{{poll.question}}</a>
+
+	</li>
+	{% endfor %}
+	</ul>
+	{% endblock %}
+	<div>
+	<br class="clearBoth" />
+		<div id="footer">FOOTER</div>
+		</div>
+		</body>
+	</html>

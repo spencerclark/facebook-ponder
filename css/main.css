@@ -1,0 +1,28 @@
+body {
+margin: 0;
+padding: 0;
+}
+#container {
+width: 720px;
+background-color: #FFF;
+margin: 0 auto;
+}
+#header, #footer {
+padding: 10px 1%;
+background-color: #CCC;
+}
+#fullWidthColumn {
+background-color: #F6F6F6;
+padding: 10px 1%;
+}
+#leftColumn, #rightColumn {
+float: left;
+background-color: #E6E6E6;
+width: 47.75%;
+padding: 10px 1%;
+}
+#rightColumn {
+float: right;
+}
+.clearBoth {
+clear: both;
